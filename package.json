@@ -1,0 +1,43 @@
+{
+  "name": "mean",
+  "version": "1.0.0",
+  "description": "minimal mean application",
+  "homepage":"mean",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "repository": "https://github.com/maratnek/mean4.git",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "maratnek <maratn566ek@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-builder": "^19.37.2"
+  },
+  "build": {
+    "appId": "com.electronqs.app",
+    "productName":"mean",
+    "directories":{
+      "output":"dist"
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "category":"X-Office",
+      "target":[
+        "AppImage",
+        "deb"
+      ]
+    }
+  }
+}
